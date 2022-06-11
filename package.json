@@ -1,0 +1,45 @@
+{
+  "name": "@oneverse/identify",
+  "description": "OneVerse Identify SDK",
+  "version": "1.0.0-Alpha.0",
+  "main": "index.js",
+  "type": "module",
+  "license": "MIT",
+  "author": "Sean",
+  "scripts": {
+    "build": "tsc",
+    "prepare": "yarn build"
+  },
+  "files": [
+    "lib",
+    "package.json",
+    "README.md"
+  ],
+  "exports": {
+    "./services/": {
+      "import": "./lib/services/*.js"
+    },
+    "./utils/*": {
+      "import": "./lib/utils/*.js"
+    }
+  },
+  "dependencies": {
+    "@3id/did-provider": "^0.4.1",
+    "@3id/model": "^0.4.1",
+    "@ceramicnetwork/http-client": "^2.0.4",
+    "@glazed/did-datastore": "^0.3.1",
+    "did-jwt-vc": "^2.1.12",
+    "dids": "^3.2.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.27.1",
+    "@typescript-eslint/parser": "^5.27.1",
+    "eslint": "^8.17.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "jest": "28.1.1",
+    "prettier": "^2.6.2",
+    "ts-node": "^10.8.1",
+    "typescript": "^4.7.3"
+  }
+}
