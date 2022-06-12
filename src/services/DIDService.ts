@@ -6,22 +6,15 @@ import { getResolver as getKeyResolver } from 'key-did-resolver';
 import { DIDOptions } from 'dids/lib/did';
 import { mnemonicToSeed } from '../utils/mnemonic';
 
-type AuthConfig = {
-  authSecret: Uint8Array;
-  mnemonic: never;
-  password: never;
-};
-
-type MnemonicConfig = {
-  mnemonic: string;
-  password?: string;
-  authSecret: never;
-};
-
 export type DIDServiceOptions = {
   ceramicApi?: string;
   authId?: string;
-} & (AuthConfig | MnemonicConfig);
+
+  authSecret?: never;
+
+  mnemonic?: string;
+  password?: string;
+};
 
 /**
  * DID 基础服务实现
