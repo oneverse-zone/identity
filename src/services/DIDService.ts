@@ -4,13 +4,13 @@ import { DID } from 'dids';
 import { getResolver as get3IDResolver } from '@ceramicnetwork/3id-did-resolver';
 import { getResolver as getKeyResolver } from 'key-did-resolver';
 import { DIDOptions } from 'dids/lib/did';
-import { mnemonicToSeed } from '../utils/mnemonic';
+import { mnemonicToSeed } from '../utils/mnemonic.js';
 
 export type DIDServiceOptions = {
   ceramicApi?: string;
   authId?: string;
 
-  authSecret?: never;
+  authSecret?: Uint8Array;
 
   mnemonic?: string;
   password?: string;
