@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/oneverse-zone/identity/compare/1.1.0...1.1.1) (2022-06-12)
+
+
+### Bug Fixes
+
+* **DIDService:** 修复ts类型错误 ([78f32f0](https://github.com/oneverse-zone/identity/commit/78f32f0acbdd2eafa96505fd51d9c1777d115826))
+
 # [1.1.0](https://github.com/oneverse-zone/identity/compare/1.0.0...1.1.0) (2022-06-12)
 
 
