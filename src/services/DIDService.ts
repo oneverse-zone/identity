@@ -46,7 +46,7 @@ export class DIDService {
     if (config.mnemonic && config.authSecret) {
       throw new Error("Can't use both mnemonic and authSecret");
     }
-    if (!config.mnemonic || !config.authSecret) {
+    if (!config.mnemonic && !config.authSecret) {
       throw new Error('Either mnemonic or authSecret is needed');
     }
 
