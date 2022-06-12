@@ -8,11 +8,13 @@ const password = '';
 const mnemonicRandom = randomMnemonic();
 // const password = '';
 
-export const authSecret = mnemonicToSeed(mnemonic, password);
+export const authSecret: Uint8Array = mnemonicToSeed(mnemonicRandom, password);
 
 async function login() {
-  const didService = await DIDService.newInstance({ authSecret });
+  const didService = await DIDService.newInstance({
+    authSecret,
+  });
   console.log(didService.authenticated);
 }
 
-// login().catch(console.log);
+login().catch(console.log);
