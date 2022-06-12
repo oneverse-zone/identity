@@ -1,24 +1,26 @@
 {
   "name": "@oneverse/identify",
   "description": "OneVerse Identify SDK",
-  "version": "0.0.0-development",
+  "version": "1.0.0",
   "license": "MIT",
   "author": "Sean",
   "type": "module",
-  "source": "./src/index.ts",
-  "main": "./lib/index.cjs",
-  "module": "./lib/index.js",
+  "main": "./lib/index.js",
+  "module": "./es/index.js",
   "files": [
+    "es",
     "lib",
     "package.json",
     "README.md"
   ],
   "exports": {
     "./services/": {
-      "import": "./lib/services/*.js"
+      "require": "./lib/services/*.js",
+      "import": "./es/services/*.js"
     },
     "./utils/*": {
-      "import": "./lib/utils/*.js"
+      "require": "./lib/utils/*.js",
+      "import": "./es/utils/*.js"
     }
   },
   "scripts": {
@@ -26,7 +28,7 @@
     "build:cjs": "tsc -p tsconfig.cjs.json",
     "build": "yarn build:cjs && yarn build:mjs",
     "format": "prettier --write \"src/**/*.[jt]s\"",
-    "release": "semantic-release --debug",
+    "release": "semantic-release --debug --ci=false",
     "prepare": "yarn build"
   },
   "dependencies": {
@@ -38,6 +40,8 @@
     "dids": "^3.2.0"
   },
   "devDependencies": {
+    "@semantic-release/changelog": "^6.0.1",
+    "@semantic-release/git": "^10.0.1",
     "@typescript-eslint/eslint-plugin": "^5.27.1",
     "@typescript-eslint/parser": "^5.27.1",
     "eslint": "^8.17.0",
