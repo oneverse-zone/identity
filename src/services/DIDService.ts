@@ -4,13 +4,24 @@ import { DID } from 'dids';
 import { getResolver as get3IDResolver } from '@ceramicnetwork/3id-did-resolver';
 import { getResolver as getKeyResolver } from 'key-did-resolver';
 import { DIDOptions } from 'dids/lib/did';
+import { mnemonicToSeed } from '../utils/mnemonic';
+
+type AuthConfig = {
+  authSecret: Uint8Array;
+  mnemonic: never;
+  password: never;
+};
+
+type MnemonicConfig = {
+  mnemonic: string;
+  password?: string;
+  authSecret: never;
+};
 
 export type DIDServiceOptions = {
   ceramicApi?: string;
-
   authId?: string;
-  authSecret: Uint8Array;
-};
+} & (AuthConfig | MnemonicConfig);
 
 /**
  * DID 基础服务实现
@@ -37,9 +48,24 @@ export class DIDService {
   static async newInstance({
     ceramicApi,
     authId = 'AuthId',
-    authSecret,
+    ...config
   }: DIDServiceOptions): Promise<DIDService> {
+    if (config.mnemonic && config.authSecret) {
+      throw new Error("Can't use both mnemonic and authSecret");
+    }
+    if (!config.mnemonic || !config.authSecret) {
+      throw new Error('Either mnemonic or authSecret is needed');
+    }
+
     const ceramic = new CeramicClient(ceramicApi);
+
+    let authSecret: Uint8Array = Uint8Array.of();
+    if (config.authSecret) {
+      authSecret = config.authSecret;
+    } else if (config.mnemonic) {
+      authSecret = mnemonicToSeed(config.mnemonic, config.password);
+    }
+
     const threeId = await ThreeIdProvider.create({
       getPermission: (req) => req.payload?.paths,
       // 一套私钥， 不会生成秘钥,不会存储在去中心化中, 需要记忆 DID 和 助记词
