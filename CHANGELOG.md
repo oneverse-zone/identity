@@ -1,3 +1,10 @@
+## [1.1.2](https://github.com/oneverse-zone/identity/compare/1.1.1...1.1.2) (2022-06-12)
+
+
+### Bug Fixes
+
+* **DIDService:** 参数校验错误 ([a180e68](https://github.com/oneverse-zone/identity/commit/a180e688f6319a9f61ba762b2895ba8c161426f2))
+
 ## [1.1.1](https://github.com/oneverse-zone/identity/compare/1.1.0...1.1.1) (2022-06-12)
 
 
