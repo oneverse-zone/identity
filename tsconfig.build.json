@@ -12,6 +12,13 @@
     "noFallthroughCasesInSwitch": true,
     "moduleResolution": "node",
     "esModuleInterop": true,
-    "skipLibCheck": true
-  }
+    "skipLibCheck": true,
+    "allowJs": false
+  },
+  "include": [
+    "src"
+  ],
+  "exclude": [
+    "test"
+  ]
 }
