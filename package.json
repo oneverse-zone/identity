@@ -1,13 +1,15 @@
 {
   "name": "@oneverse/identify",
   "description": "OneVerse Identify SDK",
-  "version": "1.0.0-Alpha.0",
+  "version": "0.0.0-development",
   "main": "index.js",
   "type": "module",
   "license": "MIT",
   "author": "Sean",
   "scripts": {
     "build": "tsc",
+    "format": "prettier --write \"src/**/*.[jt]s\"",
+    "release": "semantic-release --debug",
     "prepare": "yarn build"
   },
   "files": [
@@ -40,6 +42,14 @@
     "jest": "28.1.1",
     "prettier": "^2.6.2",
     "ts-node": "^10.8.1",
-    "typescript": "^4.7.3"
+    "typescript": "^4.7.3",
+    "semantic-release": "^19.0.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:oneverse-zone/identity.git"
+  },
+  "publishConfig": {
+    "access": "restricted"
   }
 }
