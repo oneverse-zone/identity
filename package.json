@@ -58,6 +58,6 @@
     "url": "git@github.com:oneverse-zone/identity.git"
   },
   "publishConfig": {
-    "access": "restricted"
+    "access": "public"
   }
 }
