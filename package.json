@@ -21,7 +21,8 @@
     "./utils/*": {
       "require": "./lib/utils/*.js",
       "import": "./es/utils/*.js"
-    }
+    },
+    "./package.json": "./package.json"
   },
   "scripts": {
     "build:mjs": "tsc",
