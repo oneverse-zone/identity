@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/oneverse-zone/identity/compare/1.2.1...1.3.0) (2022-06-30)
+
+
+### Features
+
+* 导出模块 ([3cb9028](https://github.com/oneverse-zone/identity/commit/3cb90285f5e75bc9af9a2d91ddbca824b8c816e7))
+
 ## [1.2.1](https://github.com/oneverse-zone/identity/compare/1.2.0...1.2.1) (2022-06-30)
 
 
