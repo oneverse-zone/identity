@@ -1360,10 +1360,10 @@
   dependencies:
     "@octokit/openapi-types" "^12.5.0"
 
-"@oneverse/utils@^1.1.0":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@oneverse/utils/-/utils-1.1.0.tgz#877b2ba5bb8b9a2968bd08ae3efb9e515c2d9ddb"
-  integrity sha512-Uyi1/kld0Cc+T1kmJkpIzoXjP8LYJ5OhOfiFvCS9MRo1R5TtO11u14QmEpekQlK4fouEij3RbdOPRMSMyH/WHw==
+"@oneverse/utils@^1.1.2":
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/@oneverse/utils/-/utils-1.1.2.tgz#db15f33fb9686e6c7645761eaf7cb8a595d9a301"
+  integrity sha512-YMpo0VXh9n1gmoPtiN6OZdr/9zKACnBhck9hwoAFPfN8Dmh2KvSL1IdKztcQL9/EjvqmphNoM6lKh7ryPj4HrQ==
   optionalDependencies:
     "@ethersproject/hdnode" "^5.6.2"
     "@stablelib/random" "^1.0.1"
