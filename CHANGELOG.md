@@ -1,3 +1,15 @@
+# [1.5.0](https://github.com/oneverse-zone/identity/compare/1.4.0...1.5.0) (2022-06-30)
+
+
+### Bug Fixes
+
+* utils 包升级修复导入错误 ([ed0f4e1](https://github.com/oneverse-zone/identity/commit/ed0f4e1fe28cafc8de8bfbb6d861bbfd656838ad))
+
+
+### Features
+
+* 改为可选依赖 ([e9a682f](https://github.com/oneverse-zone/identity/commit/e9a682fa072d023026115d224892cf803aa00a62))
+
 # [1.4.0](https://github.com/oneverse-zone/identity/compare/1.3.0...1.4.0) (2022-06-30)
 
 
