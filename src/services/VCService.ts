@@ -3,9 +3,9 @@ import { ThreeIdProvider } from '@3id/did-provider';
 import { createVerifiableCredentialJwt } from 'did-jwt-vc';
 // @ts-ignore
 import { JwtCredentialPayload, JwtCredentialSubject, W3CCredential } from 'did-jwt-vc/lib/types';
+import { toUTCString } from '@oneverse/utils';
 
 import { DIDService } from './DIDService.js';
-import { toUTCString } from '../utils/DateUtil.js';
 
 /**
  * 声明类型
