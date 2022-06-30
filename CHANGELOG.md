@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/oneverse-zone/identity/compare/1.2.0...1.2.1) (2022-06-30)
+
+
+### Bug Fixes
+
+* 模块导出错误修复 ([c02be53](https://github.com/oneverse-zone/identity/commit/c02be53d0f7b072d29b52fc2655d224e8f774503))
+
 # [1.2.0](https://github.com/oneverse-zone/identity/compare/1.1.2...1.2.0) (2022-06-30)
 
 
