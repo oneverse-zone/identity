@@ -1,3 +1,17 @@
+# [1.2.0](https://github.com/oneverse-zone/identity/compare/1.1.2...1.2.0) (2022-06-30)
+
+
+### Bug Fixes
+
+* **DIDService:** esm 模式导入错误修复 ([ddad55a](https://github.com/oneverse-zone/identity/commit/ddad55a31825f6444ccb382c8d3dca3e65039fc6))
+* export package.json ([58e2416](https://github.com/oneverse-zone/identity/commit/58e24163eefc247cf34d611e775b8b98c3e47a1b))
+* 修复升级bug ([312848d](https://github.com/oneverse-zone/identity/commit/312848d1a695033edfc96b7ad3d171da4c6f029b))
+
+
+### Features
+
+* **all:** 删除助记词工具类，使用工具包提供 ([79992f7](https://github.com/oneverse-zone/identity/commit/79992f7229f5ad9da1f8d396def043f6209afa69))
+
 ## [1.1.2](https://github.com/oneverse-zone/identity/compare/1.1.1...1.1.2) (2022-06-12)
 
 
