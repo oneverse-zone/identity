@@ -1,3 +1,11 @@
+# [1.4.0](https://github.com/oneverse-zone/identity/compare/1.3.0...1.4.0) (2022-06-30)
+
+
+### Features
+
+* 删除date util 使用工具包中提供 ([2549224](https://github.com/oneverse-zone/identity/commit/2549224035b18fc416f97fd3333f0ebb95279f00))
+* 版本升级 ([8770ae7](https://github.com/oneverse-zone/identity/commit/8770ae74b49610b1c693e0252725d4f92d74713a))
+
 # [1.3.0](https://github.com/oneverse-zone/identity/compare/1.2.1...1.3.0) (2022-06-30)
 
 
