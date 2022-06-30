@@ -14,7 +14,7 @@
     "README.md"
   ],
   "exports": {
-    "./services/": {
+    "./services/*": {
       "require": "./lib/services/*.js",
       "import": "./es/services/*.js"
     },
