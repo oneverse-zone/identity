@@ -1,14 +1,8 @@
-import {
-  CreateJWEOptions,
-  CreateJWSOptions,
-  VerifyJWSOptions,
-  VerifyJWSResult,
-} from 'dids/lib/did';
-import { DagJWS } from 'dids/lib/types';
-import { DID } from 'dids';
+import { CreateJWEOptions, CreateJWSOptions, VerifyJWSOptions, VerifyJWSResult, DagJWS, DID } from 'dids';
+// @ts-ignore
 import { JWE } from 'did-jwt';
 
-import { DIDService } from './DIDService';
+import { DIDService } from './DIDService.js';
 
 /**
  * 转成jws为字符串形式
@@ -49,10 +43,7 @@ export class JOSEService {
    * @param jws json签名数据
    * @param options 验签选项
    */
-  async verifyJWS(
-    jws: string | DagJWS,
-    options?: VerifyJWSOptions,
-  ): Promise<VerifyJWSResult> {
+  async verifyJWS(jws: string | DagJWS, options?: VerifyJWSOptions): Promise<VerifyJWSResult> {
     const did = this.didService.didInstance();
     return await did.verifyJWS(jws, options);
   }
@@ -64,11 +55,7 @@ export class JOSEService {
    * @param recipients 接收着数组,既接收方的DID数组
    * @param options
    */
-  async createJWE(
-    cleartext: Record<string, any>,
-    recipients: Array<string>,
-    options?: CreateJWEOptions,
-  ): Promise<JWE> {
+  async createJWE(cleartext: Record<string, any>, recipients: Array<string>, options?: CreateJWEOptions): Promise<JWE> {
     const did = this.didService.didInstance();
     return did.createDagJWE(cleartext, recipients, options);
   }

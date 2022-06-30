@@ -1,7 +1,7 @@
-import { DIDService } from './DIDService';
 import { DIDDataStore } from '@glazed/did-datastore';
 import { aliases as idxAliases, BasicProfile } from '@3id/model';
 import { DataKey } from './DataKey.js';
+import { DIDService } from './DIDService.js';
 
 /**
  * DID个人信息服务

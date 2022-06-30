@@ -1,10 +1,9 @@
 import { CeramicClient } from '@ceramicnetwork/http-client';
 import { ThreeIdProvider } from '@3id/did-provider';
-import { DID } from 'dids';
+import { DID, DIDOptions } from 'dids';
 import { getResolver as get3IDResolver } from '@ceramicnetwork/3id-did-resolver';
 import { getResolver as getKeyResolver } from 'key-did-resolver';
-import { DIDOptions } from 'dids/lib/did';
-import { mnemonicToSeed } from '../utils/mnemonic.js';
+import { mnemonicToSeed } from '@oneverse/utils/mnemonic';
 
 export type DIDServiceOptions = {
   ceramicApi?: string;
@@ -56,7 +55,9 @@ export class DIDService {
     if (config.authSecret) {
       authSecret = config.authSecret;
     } else if (config.mnemonic) {
-      authSecret = mnemonicToSeed(config.mnemonic, config.password);
+      authSecret = mnemonicToSeed(config.mnemonic, {
+        password: config.password,
+      });
     }
 
     const threeId = await ThreeIdProvider.create({

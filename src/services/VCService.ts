@@ -1,12 +1,11 @@
-import {
-  createVerifiableCredentialJwt,
-  JwtCredentialPayload,
-} from 'did-jwt-vc';
-import { DIDService } from './DIDService';
-import { JwtCredentialSubject } from 'did-jwt-vc/lib/types';
 import { ThreeIdProvider } from '@3id/did-provider';
-import { W3CCredential } from 'did-jwt-vc/src/types';
-import { toUTCString } from '../utils/DateUtil';
+// @ts-ignore
+import { createVerifiableCredentialJwt } from 'did-jwt-vc';
+// @ts-ignore
+import { JwtCredentialPayload, JwtCredentialSubject, W3CCredential } from 'did-jwt-vc/lib/types';
+
+import { DIDService } from './DIDService.js';
+import { toUTCString } from '../utils/DateUtil.js';
 
 /**
  * 声明类型
@@ -89,9 +88,7 @@ export class VCService {
     return {
       '@context': ['https://www.w3.org/2018/credentials/v1'],
       // id: '',
-      type: Array.isArray(payload.vc.type)
-        ? payload.vc.type
-        : [payload.vc.type],
+      type: Array.isArray(payload.vc.type) ? payload.vc.type : [payload.vc.type],
       issuer: {
         id: this.threeId.id,
       },
