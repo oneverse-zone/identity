@@ -28,9 +28,10 @@
     "build:mjs": "tsc",
     "build:cjs": "tsc -p tsconfig.cjs.json",
     "build": "yarn build:cjs && yarn build:mjs",
+    "clean": "rm -rf es && rm -rf lib",
     "format": "prettier --write \"src/**/*.[jt]s\"",
     "release": "semantic-release --debug --ci=false",
-    "prepare": "yarn build"
+    "prepare": "yarn clean && yarn format && yarn build"
   },
   "dependencies": {
     "@3id/did-provider": "^0.4.1",
