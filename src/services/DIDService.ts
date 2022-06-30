@@ -23,11 +23,7 @@ export class DIDService {
   threeId: ThreeIdProvider;
   did: DID;
 
-  private constructor(
-    ceramic: CeramicClient,
-    threeId: ThreeIdProvider,
-    did: DID,
-  ) {
+  private constructor(ceramic: CeramicClient, threeId: ThreeIdProvider, did: DID) {
     this.ceramic = ceramic;
     this.threeId = threeId;
     this.did = did;
@@ -37,11 +33,7 @@ export class DIDService {
    * 创建一个DID服务
    * @param options 服务参数
    */
-  static async newInstance({
-    ceramicApi,
-    authId = 'AuthId',
-    ...config
-  }: DIDServiceOptions): Promise<DIDService> {
+  static async newInstance({ ceramicApi, authId = 'AuthId', ...config }: DIDServiceOptions): Promise<DIDService> {
     if (config.mnemonic && config.authSecret) {
       throw new Error("Can't use both mnemonic and authSecret");
     }
