@@ -35,24 +35,25 @@
   "dependencies": {
     "@3id/did-provider": "^0.4.1",
     "@3id/model": "^0.4.1",
-    "@ceramicnetwork/http-client": "^2.0.4",
-    "@glazed/did-datastore": "^0.3.1",
-    "did-jwt-vc": "^2.1.12",
+    "@ceramicnetwork/http-client": "^2.2.1",
+    "@glazed/did-datastore": "^0.3.2",
+    "@oneverse/utils": "^1.0.0",
+    "did-jwt-vc": "^2.1.13",
     "dids": "^3.2.0"
   },
   "devDependencies": {
     "@semantic-release/changelog": "^6.0.1",
     "@semantic-release/git": "^10.0.1",
-    "@typescript-eslint/eslint-plugin": "^5.27.1",
-    "@typescript-eslint/parser": "^5.27.1",
-    "eslint": "^8.17.0",
+    "@typescript-eslint/eslint-plugin": "^5.30.0",
+    "@typescript-eslint/parser": "^5.30.0",
+    "eslint": "^8.18.0",
     "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-prettier": "^4.0.0",
-    "jest": "28.1.1",
-    "prettier": "^2.6.2",
+    "eslint-plugin-prettier": "^4.2.1",
+    "jest": "28.1.2",
+    "prettier": "^2.7.1",
     "semantic-release": "^19.0.3",
     "ts-node": "^10.8.1",
-    "typescript": "^4.7.3"
+    "typescript": "^4.7.4"
   },
   "repository": {
     "type": "git",
