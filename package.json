@@ -18,10 +18,6 @@
       "require": "./lib/services/*.js",
       "import": "./es/services/*.js"
     },
-    "./utils/*": {
-      "require": "./lib/utils/*.js",
-      "import": "./es/utils/*.js"
-    },
     "./package.json": "./package.json"
   },
   "scripts": {
