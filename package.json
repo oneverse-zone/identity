@@ -29,7 +29,7 @@
     "release": "semantic-release --debug --ci=false",
     "prepare": "yarn build"
   },
-  "dependencies": {
+  "optionalDependencies": {
     "@3id/did-provider": "^0.4.1",
     "@3id/model": "^0.4.1",
     "@ceramicnetwork/http-client": "^2.2.1",
