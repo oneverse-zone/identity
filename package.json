@@ -1,7 +1,7 @@
 {
   "name": "@oneverse/identify",
   "description": "OneVerse Identify SDK",
-  "version": "1.5.0",
+  "version": "1.1.2",
   "license": "MIT",
   "author": "Sean",
   "type": "module",
@@ -14,9 +14,13 @@
     "README.md"
   ],
   "exports": {
-    "./services/*": {
+    "./services/": {
       "require": "./lib/services/*.js",
       "import": "./es/services/*.js"
+    },
+    "./utils/*": {
+      "require": "./lib/utils/*.js",
+      "import": "./es/utils/*.js"
     },
     "./package.json": "./package.json"
   },
@@ -32,10 +36,10 @@
   "optionalDependencies": {
     "@3id/did-provider": "^0.4.1",
     "@3id/model": "^0.4.1",
-    "@ceramicnetwork/http-client": "^2.2.1",
-    "@glazed/did-datastore": "^0.3.2",
+    "@ceramicnetwork/http-client": "^2.0.4",
+    "@glazed/did-datastore": "^0.3.1",
     "@oneverse/utils": "^1.1.2",
-    "did-jwt-vc": "^2.1.13",
+    "did-jwt-vc": "^2.1.12",
     "dids": "^3.2.0"
   },
   "devDependencies": {
