@@ -19,7 +19,7 @@ export type DIDServiceOptions = {
  * DID 基础服务实现
  */
 export class DIDService {
-  ceramic: CeramicClient;
+  ceramic: any;
   threeId: ThreeIdProvider;
   did: DID;
 
@@ -41,7 +41,7 @@ export class DIDService {
       throw new Error('Either mnemonic or authSecret is needed');
     }
 
-    const ceramic = new CeramicClient(ceramicApi);
+    const ceramic: any = new CeramicClient(ceramicApi);
 
     let authSecret: Uint8Array = Uint8Array.of();
     if (config.authSecret) {
