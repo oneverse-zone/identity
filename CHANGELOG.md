@@ -1,3 +1,15 @@
+# [1.6.0](https://github.com/oneverse-zone/identity/compare/1.5.0...1.6.0) (2022-07-04)
+
+
+### Bug Fixes
+
+* 修复版本问题 ([0ac3d0f](https://github.com/oneverse-zone/identity/commit/0ac3d0ff3c1b335f33429c6fdedc0ee4a78f87bb))
+
+
+### Features
+
+* 恢复版本测试 ([8b38b36](https://github.com/oneverse-zone/identity/commit/8b38b36161218b39bf2737ab00e5395c8583c7e1))
+
 # [1.5.0](https://github.com/oneverse-zone/identity/compare/1.4.0...1.5.0) (2022-06-30)
 
 
