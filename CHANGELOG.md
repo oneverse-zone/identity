@@ -1,3 +1,10 @@
+# [1.7.0](https://github.com/oneverse-zone/identity/compare/1.6.0...1.7.0) (2022-08-17)
+
+
+### Features
+
+* upgrade ([0332f06](https://github.com/oneverse-zone/identity/commit/0332f0666b4410e077073f08fa92e50e06bcae9a))
+
 # [1.6.0](https://github.com/oneverse-zone/identity/compare/1.5.0...1.6.0) (2022-07-04)
 
 
